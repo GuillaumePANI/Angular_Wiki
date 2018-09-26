@@ -1,0 +1,8 @@
+
+<div>
+    {{article.id}} : {{article.title}} par {{article.author}}   le {{article.date | date : "dd/MM/yyyy"}} 
+
+    <a routerLink= "/detail/{{article.id}}">Détail</a>
+      <a routerLink= "/add/{{article.id}}">Modifier l'article</a>
+    </div>
+

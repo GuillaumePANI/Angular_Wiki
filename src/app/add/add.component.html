@@ -1,0 +1,14 @@
+<form (ngSubmit) ="onSubmit()">
+    <input type="text" required id="title" name="title" [(ngModel)]="newArticle.title">
+    <input type="text" required id="author" name="author" [(ngModel)]="newArticle.author">
+    <input type="text" required id="content" name="content" [(ngModel)]="newArticle.content">
+    <!-- <div class="input-group"> -->
+        <input class="form-control" placeholder="yyyy-mm-dd"
+               name="datemodel" [(ngModel)]="datemodel" ngbDatepicker #d="ngbDatepicker">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+        </div>
+      <!-- </div> -->
+    <!-- <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker> -->
+    <input type="submit">
+</form>
